@@ -7,4 +7,4 @@ layout: default
 | Task         | Date of Submission         | Link         |
 |:-------------|:---------------------------|:-------------|
 | 1            | -                          | -            |
-| 2            | 16/1/2025                  | [Task 2](./another-page.html)|
+| 2            | 16/1/2025                  | [Task 2](./Task2.html)|
