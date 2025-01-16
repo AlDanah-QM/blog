@@ -10,4 +10,6 @@ Despite the challenges, coding a fictional exhibition with audioguides was an in
 
 The following sections include screenshots and detailed descriptions of the website changes.
 
+### Dynamic Language Toggle, Supporting English and Arabic
+
 [back](./)
