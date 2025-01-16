@@ -14,7 +14,8 @@ The following sections include screenshots and detailed descriptions of the webs
 
 The color scheme was updated to align with the Qatar Museums' color palette, ensuring consistency with their branding across the website. This change was applied not only to the main page but also to the entire design, including the colors of each individual stop. Furthermore, as shown in the following screenshots, three additional stops were added to the original code, with their content populated using YAML files.
 
-![Branching]([https://guides.github.com/activities/hello-world/branching.png](https://github.com/AlDanah-QM/blog/blob/master/assets/images/Main%20page%20-%20colors.png))
+![Main page - colors](https://github.com/user-attachments/assets/98ef8e88-7791-4b5d-9b6a-3e8f01525b53)
+
 
 ### Dynamic Language Toggle, Supporting English and Arabic
 
