@@ -35,10 +35,14 @@ The `is_it_a_nationality` function leveraged a CSV file containing country names
 
 Entities were organized into CSV files, capturing their occurrences across the dataset. For each biography page, we saved the locations (links), extracted entities, their types, and their frequencies. The CSV files served as input for generating visualizations and word clouds.
 
+![image](https://github.com/user-attachments/assets/d2820ad9-2e13-4783-a025-e3d3895e28ac)
+
 
 ### Visualization
 
 We created word clouds from the extracted data to visualize the frequency of entities. The `generate_word_cloud` function read the entity-frequency pairs from the CSV files and generated word clouds using the WordCloud library. These visualizations highlighted the prominence of specific names, countries, and dates across the dataset.
+
+![image](https://github.com/user-attachments/assets/8cf4d648-408c-42ce-a8f5-791814f160a4)
 
 
 [back](./)
