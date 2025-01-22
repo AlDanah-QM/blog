@@ -8,3 +8,4 @@ layout: default
 |:-------------|:---------------------------|:-------------|
 | 1            | -                          | -            |
 | 2            | 16/1/2025                  | [Task 2](./Task2.html)|
+| 3            | 22/1/2025                  | [Task 3: Web Cawling and Scrapping](./WebScrappingTask.html)|
