@@ -4,7 +4,7 @@ layout: default
 
 ## Task 3: Web Crawling and Scraping Task - Fisrt Part
 
-The task took seven working days to complete—five from this week and two from the previous week. While I had no prior experience with data crawling and scraping, we were fortunate to discover the GLiNER model, which supports multiple languages and provides acceptable accuracy. Leveraging this tool made the process much more manageable. My experience in Python programming proved invaluable, as it allowed me to efficiently implement and adapt the model to meet the project requirements.
+The task took seven working days to complete—five from this week and two from the previous week. While I had no prior experience with data crawling and scraping, we were fortunate to discover the GLiNER model, which supports multiple languages and provides acceptable accuracy in comparison with other models we found online. Leveraging this tool made the process much more manageable. My experience in Python programming proved invaluable, as it allowed me to efficiently implement and adapt the model to meet the project requirements.
 
 Despite the advantage of using the GLiNER model, the intricate structure of the target datasets still posed significant challenges. Tracing relationships between data points and understanding the underlying patterns required considerable effort and problem-solving. One notable difficulty we faced was stemming nationalities to their respective countries. Traditional stemming libraries are designed primarily for returning the root of verbs, which meant they were not suitable for this task. To address this, we had to develop a customized function to map nationalities accurately to their corresponding countries.
 
@@ -29,7 +29,7 @@ To identify entities like names, countries, dates, and cities, we used the GLiNE
 - **Countries:** Processed using a customized function, `is_it_a_nationality`, to map nationalities to countries.
 - **Dates:** Extracted and sorted by year.
 
-The `is_it_a_nationality` function leveraged a CSV file containing country names and demonyms to identify and map nationalities accurately, addressing the limitations of standard stemming libraries.
+The `is_it_a_nationality` function leveraged a CSV file containing country names and demonyms to identify and map nationalities accurately, addressing the limitations of standard stemming libraries, this function checks if there are any nationality extracted as a country, it find the country associated, and returns it to the extracted entities, the CSV file has all the countries and nationalities, which were extracted from this [APA](https://restcountries.com/v3.1/all).
 
 ### Data Organization
 
@@ -44,5 +44,8 @@ We created word clouds from the extracted data to visualize the frequency of ent
 
 ![image](https://github.com/user-attachments/assets/8cf4d648-408c-42ce-a8f5-791814f160a4)
 
+### Presenting at the DTP Team Meeting 
+
+We had a great opportunity to present the project idea and demo in person at the DTP team meeting at **23/01/2025**. This was a valuable experience, as the team appreciated the idea and provided helpful feedback for future improvements and uses.
 
 [back](./)
