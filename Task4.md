@@ -64,5 +64,22 @@ One feature allows users to focus on a specific artist—by dragging their name,
 
 These features make it easier for users to interact with the data, uncovering meaningful insights and improving the overall experience.
 
+### Last Challenge: Encoding and Fonts
+
+In the previous version of the tool, character encoding issues were encountered in the CSV file, word cloud, and static graphs. To resolve this, we applied the `UTF-8-SIG` encoding and used fonts that support the Arabic language. Additionally, we utilized the Python library `arabic_reshaper` to ensure that Arabic letters are properly aligned.
+
+**Before**
+
+![405588687-8cf4d648-408c-42ce-a8f5-791814f160a4](https://github.com/user-attachments/assets/ed6b0dff-df10-472b-8427-43357de880f2)
+
+![image](https://github.com/user-attachments/assets/e1201f6d-1436-429c-b5d9-cf9069b3e4ab)
+
+**After**
+
+![image](https://github.com/user-attachments/assets/e2b1da80-d243-43d8-aa05-f12392dd23e1)
+
+![image](https://github.com/user-attachments/assets/7fb86706-fa5c-4307-a627-0966cee48d2b)
+
+
 
 [back](./)
