@@ -34,14 +34,35 @@ The GLiNER model exhibited reduced accuracy when transitioning from the Encyclop
 - The `person` label in collections produced irrelevant extractions. However, modifying it to `human` improved the accuracy by correctly identifying human names. This adjustment was implemented in the latest version of the tool.
 - Arabic language accuracy was initially suboptimal. After integrating Arabic-specific features, extraction issues arose, which were resolved by making Arabic labels more precise than their English counterparts.
 - The tool is now fully bilingual, supporting both English and Arabic. However, the number of extracted Arabic entities remains lower than English ones due to model accuracy limitations, which could not be further improved.
+- Users can modify labels based on their preferences, adding more, removing some, or changing them to more accurate alternatives.
 
-### Web Scrapping
-
-Using the collected URLs, we scraped the biography sections by locating the content between the "Biography" and "Exhibitions" headers. Inconsistent HTML structures across the website necessitated writing custom extraction logic for specific page layouts. Extracted content was processed for further analysis and entity recognition.
+![image](https://github.com/user-attachments/assets/f1e82e1a-d991-435e-b45a-c44a1ca59d48)
 
 
-### Entity Recognition
+### Third Challenge: Useless Visualization for Individual Webpages
 
+Previously, we attempted to visualize the entities for each link visited during the crawling process. For the encyclopedia, this meant each artist had its own CSV file containing the extracted entities, their labels, and occurrences. However, when visualizing this data using word clouds and static graphs, no meaningful insights were found. 
+To improve the process, we added code to extract all the entities from the entire website. These entities are now recorded in one CSV file, which includes all visited pages, the extracted entities, their labels, and occurrences.
+
+![image](https://github.com/user-attachments/assets/405afa02-a998-471c-97a1-a7de1b2d744f)
+
+This consolidated CSV file proved useful when we created another tool using the D3.js library to visualize the connections. We developed a simple interface with an upload function that allows users to upload any CSV file in the same format. The interface also includes a filter dropdown box featuring the unique extracted labels from the CSV file. When the CSV file is first uploaded, only the main entities appear (for example, in the encyclopedia case, this means the artist names associated with the pages visited).
+
+![image](https://github.com/user-attachments/assets/72c96390-7066-4e53-ad8b-d1983eed0675)
+
+After filtering—for instance, selecting "person"—the interface displays the extracted person names from each page and their relationships with the main entities (in this case, the artists). For context, the following image shows that Abu Ghazi and Prince Yusuf Kamal—two extracted entities labeled as persons—are linked to the two artists, Mahmoud Said and Mahmoud Mokhtar.
+
+![image](https://github.com/user-attachments/assets/c9859e30-e46d-4142-9260-7c2e3cde3b51)
+
+In another example, when filtering for the "place" label, the interface similarly shows relationships between specific places and the artists. The following image demonstrates that multiple artists are connected to a specific place, Mathaf.
+
+![image](https://github.com/user-attachments/assets/f7cb24f5-746a-47d8-9cf6-f4ccfb82fed6)
+
+The integration of the D3.js visualization tool makes it easy to explore connections between entities in a dynamic and interactive way. Users can upload any CSV with a similar structure, ensuring flexibility across datasets. The relationships between entities are shown clearly, helping users spot patterns and key connections.
+
+One feature allows users to focus on a specific artist—by dragging their name, all unrelated nodes disappear, making it easier to see only the relevant connections. Clicking on the main entities (like artists) takes users directly to their page for more details.
+
+These features make it easier for users to interact with the data, uncovering meaningful insights and improving the overall experience.
 
 
 [back](./)
