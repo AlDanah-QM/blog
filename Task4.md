@@ -29,11 +29,11 @@ However, to make the tool more adaptable for multiple websites, we decided to in
 
 
 ### Second Challenge: Accuracy of the GliNER Model
-  The GLiNER model exhibited reduced accuracy when transitioning from the Encyclopedia website to the Collections website (Collections website).
+The GLiNER model exhibited reduced accuracy when transitioning from the Encyclopedia website to the [Collections website](https://collections.qm.org.qa/en/objects?filterOnDisplay=false&pageSize=24).
 
-The 'person' label in collections produced irrelevant extractions. However, modifying it to 'human' improved the accuracy by correctly identifying human names. This adjustment was implemented in the latest version of the tool.
-Arabic language accuracy was initially suboptimal. After integrating Arabic-specific features, extraction issues arose, which were resolved by making Arabic labels more precise than their English counterparts.
-The tool is now fully bilingual, supporting both English and Arabic. However, the number of extracted Arabic entities remains lower than English ones due to model accuracy limitations, which could not be further improved.
+- The `person` label in collections produced irrelevant extractions. However, modifying it to `human` improved the accuracy by correctly identifying human names. This adjustment was implemented in the latest version of the tool.
+- Arabic language accuracy was initially suboptimal. After integrating Arabic-specific features, extraction issues arose, which were resolved by making Arabic labels more precise than their English counterparts.
+- The tool is now fully bilingual, supporting both English and Arabic. However, the number of extracted Arabic entities remains lower than English ones due to model accuracy limitations, which could not be further improved.
 
 ### Web Scrapping
 
