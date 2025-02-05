@@ -2,19 +2,46 @@
 layout: default
 ---
 
-## Task 3: Web Crawling and Scraping Task - Fisrt Part
+## Task 4: Web Crawling and Scraping Task - Second Part
 
-The task took seven working days to complete—five from this week and two from the previous week. While I had no prior experience with data crawling and scraping, we were fortunate to discover the GLiNER model, which supports multiple languages and provides acceptable accuracy. Leveraging this tool made the process much more manageable. My experience in Python programming proved invaluable, as it allowed me to efficiently implement and adapt the model to meet the project requirements.
+This task required more working days to complete compared to the previous one. Enhancing details in the code proved to be more challenging than writing it from scratch. Throughout this process, we encountered multiple challenges, but by working as a team and effectively dividing tasks, we successfully overcame them.
 
-Despite the advantage of using the GLiNER model, the intricate structure of the target datasets still posed significant challenges. Tracing relationships between data points and understanding the underlying patterns required considerable effort and problem-solving. One notable difficulty we faced was stemming nationalities to their respective countries. Traditional stemming libraries are designed primarily for returning the root of verbs, which meant they were not suitable for this task. To address this, we had to develop a customized function to map nationalities accurately to their corresponding countries.
+### First Challenge: Customized code for QM
+Last week, we encountered a challenge due to the inconsistent HTML structure of the Encyclopedia website. Despite this, we successfully extracted the "BIO" sections from all pages of the [Encyclopedia of Modern Art website](https://www.encyclopedia.mathaf.org.qa/). This solution effectively customized the tool for QM, specifically for the encyclopedia website.
 
-Additionally, extracting specific sections of the web pages proved challenging due to the inconsistent HTML structure across the website. This inconsistency required us to design tailored scraping solutions for different page layouts to ensure accurate data extraction. Despite these hurdles, we successfully extracted the "BIO" sections from all pages of the [Encyclopedia of Modern Art website](https://www.encyclopedia.mathaf.org.qa/).
+However, to make the tool more adaptable for multiple websites, we decided to incorporate user input. This enhancement allows users to specify their extraction preferences, such as: 
 
-The following sections include screenshots and detailed descriptions of the methodology, tools, and outputs.
+- **Choose between:**  
+  - Whole website scraping  
+  - Single-page scraping  
+- **Define the type of website being scraped:**  
+  - Encyclopedia  
+  - Collection   
+- **Specify the starting and ending sentences for targeted extraction**  
 
-### Website Crawling 
+**Benefits:**  
+- Enhances versatility, allowing the tool to work on multiple websites beyond the Encyclopedia of Modern Art.
+- Ability to adjust extracted labels based on website type:  
+  - *Encyclopedia:* `person`, `place`, `date`, `country`, `city`  
+  - *Collection:* `material`, `era`, `date`, `human`, `country`
 
-We implemented a web crawler using Python's `requests` and `BeautifulSoup` libraries to navigate through the website. The crawler identified and collected all URLs containing `/bios/Pages`, which indicated biography pages. The URLs were stored for further processing, and the crawler avoided redundant or irrelevant links by filtering based on predefined criteria.
+  ![image](https://github.com/user-attachments/assets/aa96c3f2-4107-484b-9163-858e77f07bec)
+
+
+### Second Challenge: Accuracy of the GliNER Model
+second_challenge:
+  title: "Accuracy of the GLiNER Model"
+  description: "The GLiNER model exhibited reduced accuracy when transitioning from the Encyclopedia website to the Collections website."
+  issues:
+    - label_extraction:
+        problem: "'person' label in collections produced irrelevant extractions."
+        solution: "Changed to 'human', improving accuracy by correctly identifying human names."
+    - arabic_language_accuracy:
+        problem: "Initial accuracy was suboptimal."
+        solution: "Integrated Arabic-specific features and refined Arabic labels to be more precise than English ones."
+    - bilingual_support:
+        status: "Fully bilingual, supporting both English and Arabic."
+        limitation: "Arabic entity extraction remains lower than English due to model accuracy constraints, with no further possible enhancements."
 
 
 ### Web Scrapping
@@ -24,25 +51,6 @@ Using the collected URLs, we scraped the biography sections by locating the cont
 
 ### Entity Recognition
 
-To identify entities like names, countries, dates, and cities, we used the GLiNER model pre-trained on multilingual datasets. The model accurately extracted entities, which were then categorized into groups. For example:
-- **People:** Excluding common pronouns.
-- **Countries:** Processed using a customized function, `is_it_a_nationality`, to map nationalities to countries.
-- **Dates:** Extracted and sorted by year.
-
-The `is_it_a_nationality` function leveraged a CSV file containing country names and demonyms to identify and map nationalities accurately, addressing the limitations of standard stemming libraries.
-
-### Data Organization
-
-Entities were organized into CSV files, capturing their occurrences across the dataset. For each biography page, we saved the locations (links), extracted entities, their types, and their frequencies. The CSV files served as input for generating visualizations and word clouds.
-
-![image](https://github.com/user-attachments/assets/d2820ad9-2e13-4783-a025-e3d3895e28ac)
-
-
-### Visualization
-
-We created word clouds from the extracted data to visualize the frequency of entities. The `generate_word_cloud` function read the entity-frequency pairs from the CSV files and generated word clouds using the WordCloud library. These visualizations highlighted the prominence of specific names, countries, and dates across the dataset.
-
-![image](https://github.com/user-attachments/assets/8cf4d648-408c-42ce-a8f5-791814f160a4)
 
 
 [back](./)
