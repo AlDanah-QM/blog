@@ -10,6 +10,7 @@ Note: **For the Glam-e Lab, any public domain conclusion in checklist 1 should b
 
 [This is the Mermaid chart for QM](https://github.com/AlDanah-QM/copyrightTool/blob/main/QMFlowChart.md).
 
+[This is the tool preview, please visit](https://htmlpreview.github.io/?https://github.com/AlDanah-QM/copyrightTool/blob/main/index.html).
 
 
 [back](./)
