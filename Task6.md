@@ -4,10 +4,10 @@ layout: default
 
 ## Task 5: Touch, See, Hear: Interactive Museum Experience Prototype
 
-This task involved testing an innovative museum experience that integrates RFID technology to display interactive 3D models of historical artifacts, accompanied by an audio guide in multiple languages. 
+This task involved testing an innovative museum experience that integrates RFID technology to display interactive 3D models of historical artifacts, accompanied by an audio guide in multiple languages. It took seven days and involved the following challenges:
 
-### Challenge 1: Understanding the Legal Language 
-One of the primary difficulties in copyright clearance is interpreting legal terminology accurately. Legal documents often contain complex language, technical jargon, and jurisdiction-specific clauses that can be challenging for non-experts to navigate. Misinterpretations can lead to compliance issues, risking copyright infringement or unnecessary restrictions on public domain works. To address this, I worked on simplifying key legal concepts by breaking them down into smaller sections and carefully analyzing their meanings step by step. Additionally, I connected information across different sections of the legal documents to understand how various copyright terms interrelate. This approach helped in making informed decisions regarding copyright status while ensuring legal compliance.
+### Challenge 1: connecting the hardware
+One of the challenges for us as computer science students is connecting sensors, 
 
 
 ### Challenge 2: QM Document Lacks Detailed Guidelines
