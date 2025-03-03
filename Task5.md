@@ -12,13 +12,13 @@ One of the primary difficulties in copyright clearance is interpreting legal ter
 
 ### Challenge 2: QM Document Lacks Detailed Guidelines
 
-The QM copyright documentation lacks detailed guidelines on determining whether a work is in the public domain, under copyright protection, or requires further review. Unlike the Glam-E Lab handbook, which provides comprehensive checklists and decision-making criteria for clearing copyright, the QM documentation offers limited details on these distinctions【9†source】. The Glam-E Lab handbook presents structured checklists for:
+The QM copyright documentation lacks detailed guidelines on determining whether a work is in the public domain, under copyright protection, or requires further review. Unlike the Glam-E Lab handbook, which provides comprehensive checklists and decision-making criteria for clearing copyright, the QM documentation offers limited details on these distinctions. The Glam-E Lab handbook presents structured checklists for:
 
 - **Evaluating the underlying work** (e.g., determining the author’s date of death and publication status).
 
 - **Assessing digital surrogates** (e.g., checking if digitized versions add creative input or are faithful reproductions).
 
-- **Reviewing metadata considerations** (e.g., determining whether descriptive metadata contains copyrighted elements)【10†source】.
+- **Reviewing metadata considerations** (e.g., determining whether descriptive metadata contains copyrighted elements).
 
 However, the abundance of information in the Glam-E Lab document can be overwhelming for individuals without legal expertise. The extensive copyright rules across different jurisdictions (UK, US, and EU) add layers of complexity, making it difficult to extract only the necessary details for practical use. To overcome this, I focused on summarizing essential information and structuring it into a step-by-step format that simplifies decision-making for copyright clearance.
 
