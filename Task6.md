@@ -6,21 +6,45 @@ layout: default
 
 This task involved testing an innovative museum experience that integrates RFID technology to display interactive 3D models of historical artifacts, accompanied by an audio guide in multiple languages. It took seven days and involved the following challenges:
 
-### Challenge 1: connecting the hardware
-One of the challenges for us as computer science students is connecting sensors, 
+### Challenge 1: Connecting the hardware
+
+As computer science students, one of the challenges we face is working with hardware components like sensors, a topic typically covered in computer engineering rather than our curriculum. However, thanks to my prior experience with sensors and hardware from my senior project, I found it relatively easy to set up the hardware by following a tutorial. The image below illustrates the process of connecting an RFID sensor to a Raspberry Pi.
+
+![image](https://github.com/user-attachments/assets/cefa86c4-f72e-4a47-99ed-e7a42ab2a958)
 
 
-### Challenge 2: QM Document Lacks Detailed Guidelines
+### Challenge 2: Finding the related libraries 
 
-The QM copyright documentation lacks detailed guidelines on determining whether a work is in the public domain, under copyright protection, or requires further review. Unlike the Glam-E Lab handbook, which provides comprehensive checklists and decision-making criteria for clearing copyright, the QM documentation offers limited details on these distinctions【9†source】. The Glam-E Lab handbook presents structured checklists for:
+Two main libraries are required to run the RFID module (MFRC522) on a Rasbary bi:
+
+1- RPi.GPIO - For controlling Raspberry Pi's GPIO pins.
+```sh
+sudo apt-get install python3-rpi.gpio
+```
+2- mfrc522 (for handling MFRC522 RFID readers) 
+```sh
+pip install mfrc522
+
+```
+
+In addition to the previous steps, there was an extra recomended step, which is enable SPI (Serial Peripheral Interface) on the Raspberry Pi using the follwoing:
+
+1- ```sh
+sudo raspi-config
+```
+
+2- Interfacing Options → SPI → Enable
+
+3- ```sh
+sudo reboot
+```
 
 - **Evaluating the underlying work** (e.g., determining the author’s date of death and publication status).
 
 - **Assessing digital surrogates** (e.g., checking if digitized versions add creative input or are faithful reproductions).
 
-- **Reviewing metadata considerations** (e.g., determining whether descriptive metadata contains copyrighted elements)【10†source】.
+- **Reviewing metadata considerations** (e.g., determining whether descriptive metadata contains copyrighted elements).
 
-However, the abundance of information in the Glam-E Lab document can be overwhelming for individuals without legal expertise. The extensive copyright rules across different jurisdictions (UK, US, and EU) add layers of complexity, making it difficult to extract only the necessary details for practical use. To overcome this, I focused on summarizing essential information and structuring it into a step-by-step format that simplifies decision-making for copyright clearance.
 
 ### Challenge 3: Creating the mermaid graphs 
 
