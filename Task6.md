@@ -2,71 +2,89 @@
 layout: default
 ---
 
-## Task 5: Touch, See, Hear: Interactive Museum Experience Prototype
+# **Task 5: Touch, See, Hear – Interactive Museum Experience Prototype**  
 
-This task involved testing an innovative museum experience that integrates RFID technology to display interactive 3D models of historical artifacts, accompanied by an audio guide in multiple languages. It took seven days and involved the following challenges:
+This task involved developing and testing an **innovative museum experience** that integrates **RFID technology** to display **interactive 3D models** of historical artifacts, accompanied by an **audio guide** in multiple languages. The project spanned **seven days** and presented several challenges, which we successfully addressed.
 
-### Challenge 1: Connecting the hardware
+---
 
-As computer science students, one of the challenges we face is working with hardware components like sensors, a topic typically covered in computer engineering rather than our curriculum. However, thanks to my prior experience with sensors and hardware from my senior project, I found it relatively easy to set up the hardware by following a tutorial. The image below illustrates the process of connecting an RFID sensor to a Raspberry Pi.
+## **Challenges and Solutions**  
 
-![image](https://github.com/user-attachments/assets/cefa86c4-f72e-4a47-99ed-e7a42ab2a958)
+### **Challenge 1: Connecting the Hardware**  
+As **computer science students**, working with **hardware components** such as sensors was unfamiliar territory, as this is typically covered in **computer engineering** courses. However, my prior experience with **hardware and sensors** during my senior project made it easier to follow a tutorial and successfully set up the **RFID module** on a **Raspberry Pi**.  
 
+The image below illustrates the **RFID sensor setup on a Raspberry Pi**:  
 
-### Challenge 2: Finding the related libraries 
+![image](https://github.com/user-attachments/assets/cefa86c4-f72e-4a47-99ed-e7a42ab2a958)  
 
-Two main libraries are required to run the RFID module (MFRC522) on a Rasbary bi:
+---
 
-1- RPi.GPIO - For controlling Raspberry Pi's GPIO pins.
-```sh
-sudo apt-get install python3-rpi.gpio
-```
-2- mfrc522 (for handling MFRC522 RFID readers) 
-```sh
-pip install mfrc522
+### **Challenge 2: Finding the Required Libraries**  
+To run the **RFID module (MFRC522)** on a **Raspberry Pi**, two primary libraries were required:  
 
-```
+1. **RPi.GPIO** – Controls the **GPIO pins** of the Raspberry Pi.  
+   ```sh
+   sudo apt-get install python3-rpi.gpio
+   ```  
+2. **mfrc522** – Manages **MFRC522 RFID readers**.  
+   ```sh
+   pip install mfrc522
+   ```  
 
-In addition to the previous steps, there was an extra recomended step, which is enable SPI (Serial Peripheral Interface) on the Raspberry Pi using the follwoing:
+Additionally, **enabling SPI (Serial Peripheral Interface)** on the Raspberry Pi was a recommended step:  
 
-1- ```sh
-sudo raspi-config
-```
+1. Open Raspberry Pi configuration:  
+   ```sh
+   sudo raspi-config
+   ```  
+2. Navigate to:  
+   ```
+   Interfacing Options → SPI → Enable
+   ```  
+3. Restart the Raspberry Pi:  
+   ```sh
+   sudo reboot
+   ```
 
-2- Interfacing Options → SPI → Enable
+---
 
-3- ```sh
-sudo reboot
-```
+### **Challenge 3: Limited RFID Storage Capacity**  
+Initially, we intended to store **3D model API keys** directly on the RFID tags for easy access upon scanning. However, due to the **limited data storage** capacity of RFID tags, this approach was not feasible.  
 
-- **Evaluating the underlying work** (e.g., determining the author’s date of death and publication status).
+#### **Alternative Solution:**  
+Instead of storing large amounts of data, we **designed a webpage** displaying all four **3D models**, allowing users to **navigate between them**. The **RFID tags** were instead used to **store only the preferred language** of the visitor. Upon scanning, the system detects the stored language and automatically loads the **corresponding audio guide** in **Arabic, English, French, or Urdu**.  
 
-- **Assessing digital surrogates** (e.g., checking if digitized versions add creative input or are faithful reproductions).
+---
 
-- **Reviewing metadata considerations** (e.g., determining whether descriptive metadata contains copyrighted elements).
+### **Challenge 4: Integrating 3D Objects in HTML**  
+Integrating **3D models** into the webpage via **iframes** presented several challenges:  
 
+1. **Large File Sizes** – The **3D models** were large, leading to **slow loading times** on the Raspberry Pi.  
+2. **Cross-Domain Restrictions** – Since the models were hosted on **Sketchfab**, their **HTML frames** could not be **modified** due to cross-domain security policies.  
+3. **Audio Synchronization** – We could not **delay the appearance of the audio guide button** until the **3D model fully loaded**, due to iframe limitations.  
 
-### Challenge 3: Creating the mermaid graphs 
+#### **Solutions Considered:**  
+- **Hosting 3D Models Locally** – This would allow complete **HTML customization**, but required designing the **entire webpage** from scratch.  
+- **Keeping Sketchfab iframes** (Final Choice) – Since modifying the **iframe structure** was not possible, we **overlaid** the **audio button** on top of the **iframe**. This ensured the **audio button** was **always available** upon page load, regardless of **3D model loading time**.  
 
-For each document, we were required to create Mermaid graphs to visually represent the copyright clearance workflow. This process varied in complexity depending on the document:
+---
 
-- **QM Copyright Flow:** The QM copyright documentation has a relatively simple structure with fewer decision points, making it straightforward to map out. The flowchart visually represents the limited distinctions between public domain, copyright protection, and contractual obligations. [This is the flowchart for QM](https://github.com/AlDanah-QM/copyrightTool/blob/main/QMFlowChart.md).
+### **Challenge 5: Integrating Python with HTML**  
+Since the **RFID system and Raspberry Pi** operate using **Python**, we had to bridge the gap between Python and HTML.  
 
-- **Glam-E Lab Copyright Flow:** The Glam-E Lab documentation contains detailed workflows covering two countries (UK and US) and three checklists. Creating an accurate Mermaid graph required multiple iterations to correctly represent the complex interconnections between these elements. The final graph successfully depicts the relationships between:
+#### **Solution:**  
+1. **Reading RFID Data** – A Python script (`API_v4.py`) was created to **read the stored language** from the RFID tag.  
+2. **Generating Dynamic HTML** – Another script (`create_html_file_v5.py`) dynamically generates an **HTML file** containing:  
+   - The **3D models**  
+   - The **audio guide** in the detected **language**  
+3. **Additional Web Components** – Other files handled **CSS styling, JavaScript interactivity, and RFID writing functions**.  
 
-  - Copyright expiration rules for the UK and US.
+---
 
-  - Criteria for evaluating digital reproductions.
+## **Conclusion**  
+This project successfully demonstrated an **interactive museum experience** by integrating **RFID technology, 3D models, and multilingual audio guides**. Through overcoming hardware challenges, **RFID limitations**, and **HTML restrictions**, we developed a **seamless system** that enhances museum visits by allowing users to **see, hear, and interact with historical artifacts** in their preferred language.
 
-  - Decision points based on metadata ownership and copyright implications.
-
-This graph serves as a useful reference for navigating the Glam-E Lab copyright clearance process, ensuring that digital collections are handled in compliance with legal standards. [This is the flowchart for Glam-e Lab](https://github.com/AlDanah-QM/copyrightTool/blob/main/GamLabChart.md).
-
-### Conclusion
-
-This task successfully streamlined the copyright clearance process by integrating legal documentation standards with a practical, automated assessment tool. By implementing structured guidelines and an interactive web interface, we have significantly enhanced the efficiency of copyright verification for digital collections. Moving forward, further improvements may include multilingual support and AI-driven assistance to optimize user interactions. [This is the tool preview](https://htmlpreview.github.io/?https://github.com/AlDanah-QM/copyrightTool/blob/main/index.html).
-
-
+Here is the link for the [code](https://github.com/Leen-QM/Raspberry)
 
 
 [back](./)
