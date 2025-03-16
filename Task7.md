@@ -180,7 +180,7 @@ The RFID Scanner & 3D Model Audio Guide system was well-received, with most user
 However, audio clarity impacted user satisfaction, with French and some Arabic users rating it lower. Minor usability issues were noted, particularly among those who rated Ease of Use as “Somewhat Easy”, leading to lower engagement.
 Additionally, a few users reported system glitches and suggested language level adjustments. Expanding language support could further enhance accessibility and inclusivity for diverse museum visitors.
 
-Thus, the following recommendations should be considered for future enhancments:
+Thus, the following recommendations should be considered as future enhancements:
 
 #### 1. Improve Audio Clarity & Language Adaptation:
 
