@@ -168,7 +168,7 @@ Count_Responses = COUNTROWS(Table1)
   - One user suggested "Tune of the audio guide should be adapted to feel friendlier."
   - Another mentioned "Glitch stuff, level of language should be easier for other ages and public."
 - The lowest-rated Intuitiveness score (3) had the lowest recommendation (5).
-  - The feedback given is unclear but might indicate dissatisfaction or confusion.
+  - The feedback given is unclear but might indicate dissatisfaction or confusion. However, upon reviewing this user's input, the recommendations from the "Personalizing the Audio Guide Experience" section align with their concerns. Their dissatisfaction appears to stem from the limited functionality of the bracelets, which currently only store language preferences. Expanding the bracelet's capabilities, as suggested, could address these concerns by offering a more personalized and enriched user experience.
 
 **Conclusion: Users who found the system highly intuitive (5) were more likely to recommend it and had fewer complaints. Moreover, some users still suggested minor improvements (e.g., clarity of audio, glitch fixes, and more language options). Also, users with an Intuitiveness score of 4 raised concerns about audio friendliness and system glitches. Finally, the user who rated Intuitiveness as 3 and Recommendation as 5 might have had a poor experience, but their feedback is unclear.**
 
