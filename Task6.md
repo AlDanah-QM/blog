@@ -86,5 +86,9 @@ This project successfully demonstrated an **interactive museum experience** by i
 
 Here is the link for the [code](https://github.com/Leen-QM/Raspberry)
 
+In addition, we created a survey to collect the answers for the users using and trying this tool, the details, analysis, and visualization of the survey are in the following page.
+
+Here is the link for the [survey](./Task7.md)
+
 
 [back](./)
