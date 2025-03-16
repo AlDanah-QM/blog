@@ -194,7 +194,6 @@ Thus, the following recommendations should be considered as future enhancements:
 - Refine the RFID scanning process to make it even smoother and more intuitive.
 - Provide a quick onboarding guide (e.g., on-screen prompts or a short tutorial) to assist first-time users.
 - Improve 3D model interactivity, ensuring smoother controls for zooming, rotating, and synchronizing the audio guide with the visual model.
-- 
 
 #### 3. Address Glitches & Stability Issues
 
@@ -210,6 +209,6 @@ To enhance user engagement and improve the educational value of the audio guide,
 - Data-Driven Insights: Use collected user data to analyze visitor engagement trends, helping the museum refine content and improve future exhibits.
 
 
-In conclusion, the following link has the survey [form](https://forms.office.com.mcas.ms/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=q_hkVYnFTUqMnhNUgAr8cYQM0E4QuMlIgZW7K0JkdzhURFozQlM1UllDRzJGRkdOVkNKS0MwRTRYRi4u)
+Finally, the following link has the survey [form](https://forms.office.com.mcas.ms/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=q_hkVYnFTUqMnhNUgAr8cYQM0E4QuMlIgZW7K0JkdzhURFozQlM1UllDRzJGRkdOVkNKS0MwRTRYRi4u)
 
 [back](./)
