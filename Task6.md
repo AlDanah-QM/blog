@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# **Task 5: Touch, See, Hear – Interactive Museum Experience Prototype**  
+# **Task 6: Touch, See, Hear – Interactive Museum Experience Prototype**  
 
 This task involved developing and testing an **innovative museum experience** that integrates **RFID technology** to display **interactive 3D models** of historical artifacts, accompanied by an **audio guide** in multiple languages. The project spanned **seven days** and presented several challenges, which we successfully addressed.
 
