@@ -15,7 +15,9 @@ As **computer science students**, working with **hardware components** such as s
 
 The image below illustrates the **RFID sensor setup on a Raspberry Pi**:  
 
-![image](https://github.com/user-attachments/assets/cefa86c4-f72e-4a47-99ed-e7a42ab2a958)  
+![image](https://github.com/user-attachments/assets/cefa86c4-f72e-4a47-99ed-e7a42ab2a958) 
+
+![image](https://github.com/user-attachments/assets/3ec5f5fb-93b7-41d2-bba1-aabe248656fe)
 
 ---
 
